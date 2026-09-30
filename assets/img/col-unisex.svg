@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Унисекс коллекция — два флакона среди листвы">
+  <defs>
+    <linearGradient id="c3-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1a14"/>
+      <stop offset=".5" stop-color="#0a1410"/>
+      <stop offset="1" stop-color="#040805"/>
+    </linearGradient>
+    <radialGradient id="c3-bloom" cx=".5" cy=".52" r=".5">
+      <stop offset="0" stop-color="#e8c37a" stop-opacity=".4"/>
+      <stop offset=".45" stop-color="#6f7a3a" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="c3-glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7e6bb" stop-opacity=".55"/>
+      <stop offset=".5" stop-color="#9fb884" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#2f3a22" stop-opacity=".6"/>
+    </linearGradient>
+    <linearGradient id="c3-juice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d3c56a" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#6f6a1c" stop-opacity=".95"/>
+    </linearGradient>
+    <linearGradient id="c3-cap" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbeec4"/>
+      <stop offset=".5" stop-color="#c9a44c"/>
+      <stop offset="1" stop-color="#7d5f1f"/>
+    </linearGradient>
+    <linearGradient id="c3-leaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c4029"/>
+      <stop offset="1" stop-color="#0c150e"/>
+    </linearGradient>
+    <linearGradient id="c3-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset=".35" stop-color="#040805" stop-opacity="0"/>
+      <stop offset="1" stop-color="#040805" stop-opacity=".95"/>
+    </linearGradient>
+    <radialGradient id="c3-vig" cx=".5" cy=".45" r=".75">
+      <stop offset=".55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity=".72"/>
+    </radialGradient>
+    <filter id="c3-b30" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="30"/></filter>
+    <filter id="c3-b8" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="c3-b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#c3-bg)"/>
+  <rect width="800" height="1000" fill="url(#c3-bloom)"/>
+  <g filter="url(#c3-b30)" opacity=".45">
+    <ellipse cx="140" cy="150" rx="300" ry="220" fill="#16281c"/>
+    <ellipse cx="680" cy="880" rx="300" ry="220" fill="#101f16"/>
+  </g>
+
+  <!-- фоновые листья -->
+  <g fill="url(#c3-leaf)" opacity=".85">
+    <path d="M-30 520 C120 470 210 360 230 220 C90 260 -10 370 -30 520 Z"/>
+    <path d="M830 560 C690 500 610 400 590 260 C720 300 820 410 830 560 Z"/>
+  </g>
+
+  <!-- два флакона -->
+  <g>
+    <ellipse cx="400" cy="792" rx="220" ry="34" fill="#000000" opacity=".5" filter="url(#c3-b8)"/>
+    <!-- левый флакон -->
+    <g transform="translate(-92 0)">
+      <rect x="278" y="520" width="126" height="248" rx="14" fill="url(#c3-glass)" stroke="#e0c179" stroke-width="1.5" stroke-opacity=".55"/>
+      <rect x="288" y="600" width="106" height="160" rx="10" fill="url(#c3-juice)"/>
+      <rect x="308" y="480" width="66" height="44" fill="#9aa25a" opacity=".5"/>
+      <rect x="302" y="440" width="78" height="46" rx="7" fill="url(#c3-cap)"/>
+      <rect x="288" y="536" width="10" height="200" rx="5" fill="#fff8e2" opacity=".28"/>
+      <rect x="300" y="700" width="82" height="34" rx="3" fill="#0b0d05" opacity=".5"/>
+      <text x="341" y="723" font-family="Georgia, 'Times New Roman', serif" font-size="15" letter-spacing="2.5" fill="#e8d7a8" text-anchor="middle">MORAI</text>
+    </g>
+    <!-- правый флакон (шире, ниже) -->
+    <g transform="translate(96 0)">
+      <rect x="292" y="596" width="146" height="176" rx="12" fill="url(#c3-glass)" stroke="#e0c179" stroke-width="1.5" stroke-opacity=".45" opacity=".92"/>
+      <rect x="302" y="646" width="126" height="118" rx="8" fill="url(#c3-juice)" opacity=".85"/>
+      <rect x="330" y="560" width="70" height="40" fill="#83904f" opacity=".45"/>
+      <rect x="324" y="524" width="82" height="42" rx="6" fill="url(#c3-cap)" opacity=".95"/>
+      <rect x="302" y="612" width="9" height="140" rx="4" fill="#fff8e2" opacity=".22"/>
+    </g>
+  </g>
+
+  <!-- передние листья -->
+  <g fill="#060d08" opacity=".92">
+    <path d="M0 700 C120 730 200 810 210 1000 L0 1000 Z"/>
+    <path d="M800 660 C700 700 630 800 626 1000 L800 1000 Z"/>
+  </g>
+  <g stroke="#0d1a10" stroke-width="6" fill="none" opacity=".8" stroke-linecap="round">
+    <path d="M60 1000 C90 900 80 820 40 760"/>
+    <path d="M740 1000 C710 900 720 820 760 760"/>
+  </g>
+  <g fill="#e0c179" filter="url(#c3-b3)">
+    <circle cx="200" cy="330" r="14" opacity=".12"/>
+    <circle cx="620" cy="430" r="9" opacity=".14"/>
+    <circle cx="300" cy="240" r="7" opacity=".16"/>
+    <circle cx="540" cy="250" r="11" opacity=".1"/>
+  </g>
+
+  <rect width="800" height="1000" fill="url(#c3-fade)"/>
+  <rect width="800" height="1000" fill="url(#c3-vig)"/>
+</svg>

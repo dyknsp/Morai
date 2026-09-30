@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Флакон Chanel Bleu de Chanel — синее стекло с чёрной крышкой">
+  <defs>
+    <linearGradient id="p5-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1120"/>
+      <stop offset=".55" stop-color="#0a0e18"/>
+      <stop offset="1" stop-color="#03050a"/>
+    </linearGradient>
+    <radialGradient id="p5-glow" cx=".5" cy=".5" r=".46">
+      <stop offset="0" stop-color="#2f6fd8" stop-opacity=".42"/>
+      <stop offset=".45" stop-color="#132a5c" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="p5-glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cfe0ff" stop-opacity=".45"/>
+      <stop offset=".35" stop-color="#1f4aa8" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#04070f" stop-opacity=".9"/>
+    </linearGradient>
+    <linearGradient id="p5-juice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f4aa8" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#071026" stop-opacity=".98"/>
+    </linearGradient>
+    <linearGradient id="p5-cap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3a3f46"/>
+      <stop offset=".35" stop-color="#0e1114"/>
+      <stop offset="1" stop-color="#040506"/>
+    </linearGradient>
+    <radialGradient id="p5-vig" cx=".5" cy=".5" r=".72">
+      <stop offset=".5" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity=".78"/>
+    </radialGradient>
+    <filter id="p5-b16" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="p5-b4" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+
+  <rect width="800" height="640" fill="url(#p5-bg)"/>
+  <rect width="800" height="640" fill="url(#p5-glow)"/>
+  <ellipse cx="400" cy="548" rx="200" ry="26" fill="#000000" opacity=".55" filter="url(#p5-b16)"/>
+
+  <g>
+    <circle cx="400" cy="330" r="170" fill="#2f6fd8" opacity=".12" filter="url(#p5-b16)"/>
+    <!-- широкий приземистый флакон -->
+    <rect x="286" y="300" width="228" height="248" rx="10" fill="url(#p5-glass)" stroke="#8fb0f0" stroke-width="1.4" stroke-opacity=".45"/>
+    <rect x="298" y="342" width="204" height="194" rx="6" fill="url(#p5-juice)"/>
+    <rect x="352" y="252" width="96" height="50" fill="#132a5c" opacity=".6"/>
+    <rect x="336" y="198" width="128" height="56" rx="5" fill="url(#p5-cap)"/>
+    <rect x="352" y="210" width="9" height="32" rx="4" fill="#9aa4b2" opacity=".32"/>
+    <rect x="300" y="316" width="13" height="220" rx="6" fill="#eaf1ff" opacity=".26"/>
+    <rect x="490" y="330" width="7" height="200" rx="3" fill="#ffffff" opacity=".1"/>
+    <rect x="316" y="404" width="168" height="52" rx="3" fill="#04070f" opacity=".5"/>
+    <text x="400" y="428" font-family="Georgia, 'Times New Roman', serif" font-size="17" letter-spacing="3" fill="#e6d6a8" text-anchor="middle">MORAI</text>
+    <text x="400" y="446" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="4" fill="#c9a44c" text-anchor="middle">AROMA</text>
+    <path d="M286 300 L514 300" stroke="#cfe0ff" stroke-width="1" stroke-opacity=".3"/>
+  </g>
+
+  <rect y="558" width="800" height="82" fill="#03050a" opacity=".7"/>
+  <rect width="800" height="640" fill="url(#p5-vig)"/>
+</svg>

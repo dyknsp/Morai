@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Подарочные наборы — тёмная коробка с золотой лентой">
+  <defs>
+    <linearGradient id="c4-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111610"/>
+      <stop offset=".5" stop-color="#0c110d"/>
+      <stop offset="1" stop-color="#040704"/>
+    </linearGradient>
+    <radialGradient id="c4-bloom" cx=".5" cy=".48" r=".52">
+      <stop offset="0" stop-color="#f0cd84" stop-opacity=".42"/>
+      <stop offset=".45" stop-color="#8a6a2a" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="c4-box" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e2a20"/>
+      <stop offset=".5" stop-color="#131c15"/>
+      <stop offset="1" stop-color="#080c09"/>
+    </linearGradient>
+    <linearGradient id="c4-lid" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#28362a"/>
+      <stop offset="1" stop-color="#0f150f"/>
+    </linearGradient>
+    <linearGradient id="c4-ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbeec4"/>
+      <stop offset=".45" stop-color="#c9a44c"/>
+      <stop offset="1" stop-color="#8a6a24"/>
+    </linearGradient>
+    <linearGradient id="c4-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset=".35" stop-color="#040704" stop-opacity="0"/>
+      <stop offset="1" stop-color="#040704" stop-opacity=".95"/>
+    </linearGradient>
+    <radialGradient id="c4-vig" cx=".5" cy=".45" r=".75">
+      <stop offset=".55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity=".72"/>
+    </radialGradient>
+    <filter id="c4-b30" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="30"/></filter>
+    <filter id="c4-b10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="c4-b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#c4-bg)"/>
+  <rect width="800" height="1000" fill="url(#c4-bloom)"/>
+  <g filter="url(#c4-b30)" opacity=".4">
+    <ellipse cx="120" cy="880" rx="300" ry="200" fill="#16241a"/>
+    <ellipse cx="700" cy="160" rx="240" ry="180" fill="#1a2418"/>
+  </g>
+
+  <!-- подарок -->
+  <g transform="translate(0 40)">
+    <ellipse cx="400" cy="760" rx="230" ry="34" fill="#000000" opacity=".5" filter="url(#c4-b10)"/>
+    <!-- корпус -->
+    <path d="M250 430 L550 430 L566 742 L234 742 Z" fill="url(#c4-box)" stroke="#3a4a34" stroke-width="1.4" stroke-opacity=".7"/>
+    <!-- крышка -->
+    <path d="M232 330 L568 330 L556 442 L244 442 Z" fill="url(#c4-lid)" stroke="#c9a44c" stroke-width="1.4" stroke-opacity=".45"/>
+    <path d="M232 330 L568 330 L564 356 L236 356 Z" fill="#2e3d2c" opacity=".8"/>
+    <!-- ленты -->
+    <rect x="372" y="330" width="56" height="412" fill="url(#c4-ribbon)" opacity=".9"/>
+    <rect x="232" y="372" width="336" height="34" fill="url(#c4-ribbon)" opacity=".55"/>
+    <rect x="372" y="330" width="14" height="412" fill="#fff8e2" opacity=".22"/>
+    <!-- бант -->
+    <g transform="translate(400 316)">
+      <path d="M-6 0 C-96 -70 -168 -34 -150 18 C-134 62 -60 46 -6 8 Z" fill="url(#c4-ribbon)"/>
+      <path d="M6 0 C96 -70 168 -34 150 18 C134 62 60 46 6 8 Z" fill="url(#c4-ribbon)"/>
+      <path d="M-4 2 C-46 -22 -84 -12 -80 10 C-76 32 -34 26 -4 8 Z" fill="#fbeec4" opacity=".35"/>
+      <ellipse cx="0" cy="6" rx="20" ry="16" fill="#e0c179"/>
+      <ellipse cx="-6" cy="2" rx="8" ry="6" fill="#fff8e2" opacity=".5"/>
+      <path d="M-14 20 C-46 60 -70 96 -74 128 C-40 100 -12 62 -2 26 Z" fill="url(#c4-ribbon)" opacity=".85"/>
+      <path d="M14 20 C46 60 70 96 74 128 C40 100 12 62 2 26 Z" fill="url(#c4-ribbon)" opacity=".85"/>
+    </g>
+    <!-- блики на корпусе -->
+    <path d="M250 430 L300 430 L286 742 L234 742 Z" fill="#ffffff" opacity=".05"/>
+    <path d="M500 430 L550 430 L566 742 L514 742 Z" fill="#000000" opacity=".18"/>
+  </g>
+
+  <!-- искры -->
+  <g fill="#f0d79a" filter="url(#c4-b3)">
+    <circle cx="200" cy="290" r="9" opacity=".2"/>
+    <circle cx="620" cy="360" r="7" opacity=".22"/>
+    <circle cx="250" cy="560" r="11" opacity=".12"/>
+    <circle cx="580" cy="640" r="8" opacity=".14"/>
+    <circle cx="400" cy="200" r="6" opacity=".25"/>
+  </g>
+
+  <rect width="800" height="1000" fill="url(#c4-fade)"/>
+  <rect width="800" height="1000" fill="url(#c4-vig)"/>
+</svg>

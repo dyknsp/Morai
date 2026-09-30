@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ночной лес, сова и флакон духов MORAI AROMA">
+  <defs>
+    <linearGradient id="h-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1a13"/>
+      <stop offset=".42" stop-color="#0d1f16"/>
+      <stop offset="1" stop-color="#040805"/>
+    </linearGradient>
+    <radialGradient id="h-glow" cx=".52" cy=".66" r=".40">
+      <stop offset="0" stop-color="#f4d391" stop-opacity=".62"/>
+      <stop offset=".3" stop-color="#a07c31" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="h-glow2" cx=".76" cy=".42" r=".30">
+      <stop offset="0" stop-color="#e8c37a" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="h-tree" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#102218"/>
+      <stop offset="1" stop-color="#050a07"/>
+    </linearGradient>
+    <linearGradient id="h-glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbe9bd" stop-opacity=".72"/>
+      <stop offset=".45" stop-color="#c9982f" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#5a3d12" stop-opacity=".65"/>
+    </linearGradient>
+    <linearGradient id="h-juice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5c463" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#95590f" stop-opacity=".98"/>
+    </linearGradient>
+    <linearGradient id="h-cap" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdf3d3"/>
+      <stop offset=".45" stop-color="#d3ac5c"/>
+      <stop offset="1" stop-color="#8a6a24"/>
+    </linearGradient>
+    <linearGradient id="h-owlbody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7b6244"/>
+      <stop offset=".42" stop-color="#4d3b24"/>
+      <stop offset="1" stop-color="#1d160c"/>
+    </linearGradient>
+    <linearGradient id="h-owlwing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5c4629"/>
+      <stop offset="1" stop-color="#191207"/>
+    </linearGradient>
+    <linearGradient id="h-branch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a2c16"/>
+      <stop offset="1" stop-color="#0d0a05"/>
+    </linearGradient>
+    <radialGradient id="h-vig" cx=".5" cy=".48" r=".78">
+      <stop offset=".5" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity=".8"/>
+    </radialGradient>
+    <linearGradient id="h-bottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#040805" stop-opacity="0"/>
+      <stop offset="1" stop-color="#040805" stop-opacity=".9"/>
+    </linearGradient>
+    <filter id="h-b20" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="20"/></filter>
+    <filter id="h-b9" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="h-b4" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="h-b2" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.6"/></filter>
+    <filter id="h-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#h-bg)"/>
+
+  <!-- дальний план: стволы -->
+  <g filter="url(#h-b9)" opacity=".85">
+    <rect x="60" y="120" width="46" height="780" rx="20" fill="url(#h-tree)"/>
+    <rect x="190" y="60" width="30" height="840" rx="14" fill="url(#h-tree)"/>
+    <rect x="330" y="150" width="58" height="750" rx="26" fill="url(#h-tree)"/>
+    <rect x="520" y="90" width="34" height="810" rx="16" fill="url(#h-tree)"/>
+    <rect x="1470" y="110" width="52" height="790" rx="24" fill="url(#h-tree)"/>
+    <rect x="1560" y="140" width="40" height="760" rx="18" fill="url(#h-tree)"/>
+  </g>
+
+  <!-- крона -->
+  <g filter="url(#h-b20)" opacity=".9">
+    <ellipse cx="250" cy="80" rx="300" ry="150" fill="#0c1c13"/>
+    <ellipse cx="700" cy="20" rx="360" ry="140" fill="#0a1910"/>
+    <ellipse cx="1200" cy="50" rx="340" ry="150" fill="#0b1a11"/>
+    <ellipse cx="1520" cy="110" rx="260" ry="150" fill="#09160f"/>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#h-glow)"/>
+  <rect width="1600" height="900" fill="url(#h-glow2)"/>
+
+  <!-- боке -->
+  <g>
+    <circle cx="180" cy="300" r="16" fill="#e6c377" opacity=".10" filter="url(#h-b4)"/>
+    <circle cx="300" cy="470" r="11" fill="#f0d79a" opacity=".13" filter="url(#h-b4)"/>
+    <circle cx="120" cy="560" r="22" fill="#c9a44c" opacity=".08" filter="url(#h-b4)"/>
+    <circle cx="470" cy="250" r="13" fill="#f0d79a" opacity=".12" filter="url(#h-b4)"/>
+    <circle cx="640" cy="180" r="9" fill="#f7e3ae" opacity=".15" filter="url(#h-b2)"/>
+    <circle cx="900" cy="200" r="14" fill="#e6c377" opacity=".11" filter="url(#h-b4)"/>
+    <circle cx="1420" cy="180" r="10" fill="#f0d79a" opacity=".13" filter="url(#h-b2)"/>
+    <circle cx="1500" cy="420" r="18" fill="#e6c377" opacity=".09" filter="url(#h-b4)"/>
+    <circle cx="820" cy="120" r="7" fill="#fbeec4" opacity=".16" filter="url(#h-b2)"/>
+    <circle cx="1040" cy="330" r="12" fill="#e6c377" opacity=".10" filter="url(#h-b4)"/>
+  </g>
+
+  <!-- ветка -->
+  <g>
+    <path d="M1000 700 C1160 682 1340 686 1600 664 L1600 700 C1380 726 1180 724 1000 742 Z" fill="url(#h-branch)"/>
+    <path d="M1000 700 C1160 682 1340 686 1600 664" stroke="#6b5228" stroke-width="2" fill="none" opacity=".55"/>
+  </g>
+
+  <!-- сова -->
+  <g>
+    <circle cx="1215" cy="470" r="300" fill="#a07c31" opacity=".12" filter="url(#h-b20)"/>
+
+    <!-- тело -->
+    <path d="M1215 372 C1128 372 1078 428 1062 512 C1046 604 1062 660 1092 700 L1338 700 C1368 660 1384 604 1368 512 C1352 428 1302 372 1215 372 Z" fill="url(#h-owlbody)"/>
+    <!-- крылья -->
+    <path d="M1070 470 C1012 522 996 604 1024 684 C1044 626 1058 556 1078 502 Z" fill="url(#h-owlwing)"/>
+    <path d="M1360 470 C1418 522 1434 604 1406 684 C1386 626 1372 556 1352 502 Z" fill="url(#h-owlwing)"/>
+    <!-- светлая грудь -->
+    <path d="M1215 430 C1170 430 1144 470 1140 520 C1136 574 1156 622 1176 656 L1254 656 C1274 622 1294 574 1290 520 C1286 470 1260 430 1215 430 Z" fill="#8a6f49" opacity=".5"/>
+    <!-- контурный свет слева -->
+    <path d="M1215 372 C1128 372 1078 428 1062 512 C1046 604 1062 660 1092 700" stroke="#e0c179" stroke-width="3" fill="none" opacity=".3"/>
+    <!-- перья на груди -->
+    <g fill="#2a2013" opacity=".7">
+      <ellipse cx="1178" cy="500" rx="20" ry="11" transform="rotate(-16 1178 500)"/>
+      <ellipse cx="1246" cy="536" rx="19" ry="10" transform="rotate(14 1246 536)"/>
+      <ellipse cx="1186" cy="572" rx="17" ry="9" transform="rotate(-11 1186 572)"/>
+      <ellipse cx="1244" cy="606" rx="16" ry="9" transform="rotate(12 1244 606)"/>
+      <ellipse cx="1212" cy="648" rx="15" ry="8" transform="rotate(-6 1212 648)"/>
+    </g>
+    <!-- лапы -->
+    <path d="M1160 700 L1172 736 L1200 736 L1194 700 Z" fill="#241a0e"/>
+    <path d="M1270 700 L1258 736 L1230 736 L1236 700 Z" fill="#241a0e"/>
+    <!-- голова -->
+    <circle cx="1215" cy="300" r="118" fill="#5b4527"/>
+    <circle cx="1215" cy="300" r="118" fill="none" stroke="#e0c179" stroke-width="3" stroke-opacity=".28"/>
+    <path d="M1108 218 L1078 148 L1146 200 Z" fill="#4a3820"/>
+    <path d="M1322 218 L1352 148 L1284 200 Z" fill="#4a3820"/>
+    <!-- лицевой диск -->
+    <circle cx="1158" cy="308" r="66" fill="#3d2f1a" opacity=".85"/>
+    <circle cx="1272" cy="308" r="66" fill="#3d2f1a" opacity=".85"/>
+    <!-- глаза -->
+    <circle cx="1158" cy="308" r="42" fill="#fbe08f"/>
+    <circle cx="1272" cy="308" r="42" fill="#fbe08f"/>
+    <circle cx="1158" cy="308" r="42" fill="none" stroke="#8a6a24" stroke-width="4"/>
+    <circle cx="1272" cy="308" r="42" fill="none" stroke="#8a6a24" stroke-width="4"/>
+    <circle cx="1158" cy="308" r="18" fill="#0a0703"/>
+    <circle cx="1272" cy="308" r="18" fill="#0a0703"/>
+    <circle cx="1150" cy="298" r="7" fill="#fffdf4" opacity=".9"/>
+    <circle cx="1264" cy="298" r="7" fill="#fffdf4" opacity=".9"/>
+    <!-- клюв -->
+    <path d="M1215 336 L1232 374 L1198 374 Z" fill="#d9b463"/>
+    <!-- блики на оперении -->
+    <path d="M1112 250 C1140 226 1176 216 1210 218" stroke="#e6cd96" stroke-width="3" fill="none" opacity=".28"/>
+    <path d="M1320 250 C1292 226 1256 216 1222 218" stroke="#e6cd96" stroke-width="3" fill="none" opacity=".2"/>
+  </g>
+
+  <!-- подставка и флакон -->
+  <g>
+    <ellipse cx="840" cy="782" rx="250" ry="42" fill="#0a0805" opacity=".9" filter="url(#h-b9)"/>
+    <ellipse cx="840" cy="792" rx="160" ry="24" fill="#000000" opacity=".55" filter="url(#h-b4)"/>
+    <circle cx="840" cy="640" r="210" fill="#f0c46a" opacity=".22" filter="url(#h-b20)"/>
+    <g>
+      <rect x="758" y="546" width="164" height="226" rx="17" fill="url(#h-glass)" stroke="#e8c37a" stroke-width="2" stroke-opacity=".8"/>
+      <rect x="770" y="606" width="140" height="156" rx="12" fill="url(#h-juice)"/>
+      <rect x="798" y="498" width="84" height="52" fill="#b98d33" opacity=".65"/>
+      <rect x="790" y="452" width="100" height="54" rx="8" fill="url(#h-cap)"/>
+      <rect x="790" y="452" width="100" height="54" rx="8" fill="none" stroke="#8a6a24" stroke-width="1.4" stroke-opacity=".85"/>
+      <rect x="804" y="464" width="12" height="30" rx="5" fill="#fffaea" opacity=".65"/>
+      <rect x="772" y="562" width="14" height="190" rx="7" fill="#fffaea" opacity=".42"/>
+      <rect x="896" y="580" width="9" height="160" rx="4" fill="#fffaea" opacity=".2"/>
+      <rect x="792" y="668" width="96" height="46" rx="4" fill="#120e07" opacity=".6"/>
+      <text x="841" y="698" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="3" fill="#f2dcae" text-anchor="middle">MORAI</text>
+      <circle cx="841" cy="776" r="16" fill="#f5c463" opacity=".3" filter="url(#h-b4)"/>
+    </g>
+  </g>
+
+  <!-- передний план: листва -->
+  <g fill="#040704" opacity=".96">
+    <path d="M0 620 C90 660 150 740 160 900 L0 900 Z"/>
+    <path d="M1600 540 C1520 596 1470 700 1468 900 L1600 900 Z"/>
+    <path d="M0 900 C60 820 180 790 300 800 C220 840 140 880 120 900 Z" opacity=".8"/>
+  </g>
+  <g stroke="#0a1409" stroke-width="7" fill="none" opacity=".85" stroke-linecap="round">
+    <path d="M40 900 C70 800 60 720 20 660"/>
+    <path d="M120 900 C160 810 200 760 250 730"/>
+    <path d="M1560 900 C1530 800 1540 700 1580 620"/>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#h-bottom)"/>
+  <rect width="1600" height="900" fill="url(#h-vig)"/>
+  <rect width="1600" height="900" filter="url(#h-grain)" opacity=".07"/>
+</svg>

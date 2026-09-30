@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Флакон Le Labo Santal 33 — янтарное стекло с чёрной этикеткой">
+  <defs>
+    <linearGradient id="p3-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#171208"/>
+      <stop offset=".55" stop-color="#100c06"/>
+      <stop offset="1" stop-color="#060402"/>
+    </linearGradient>
+    <radialGradient id="p3-glow" cx=".5" cy=".5" r=".46">
+      <stop offset="0" stop-color="#e0a743" stop-opacity=".5"/>
+      <stop offset=".45" stop-color="#7a5216" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="p3-glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffeec4" stop-opacity=".5"/>
+      <stop offset=".4" stop-color="#c9922f" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#2a1c06" stop-opacity=".8"/>
+    </linearGradient>
+    <linearGradient id="p3-juice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0a743" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#7a5216" stop-opacity=".98"/>
+    </linearGradient>
+    <linearGradient id="p3-cap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5a5a5a"/>
+      <stop offset=".4" stop-color="#1c1c1c"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <radialGradient id="p3-vig" cx=".5" cy=".5" r=".72">
+      <stop offset=".5" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity=".75"/>
+    </radialGradient>
+    <filter id="p3-b16" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="p3-b4" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+
+  <rect width="800" height="640" fill="url(#p3-bg)"/>
+  <rect width="800" height="640" fill="url(#p3-glow)"/>
+  <ellipse cx="400" cy="548" rx="180" ry="24" fill="#000000" opacity=".55" filter="url(#p3-b16)"/>
+
+  <g>
+    <circle cx="400" cy="330" r="160" fill="#e0a743" opacity=".13" filter="url(#p3-b16)"/>
+    <rect x="330" y="252" width="140" height="296" rx="10" fill="url(#p3-glass)" stroke="#f0cd84" stroke-width="1.4" stroke-opacity=".45"/>
+    <rect x="340" y="306" width="120" height="228" rx="6" fill="url(#p3-juice)"/>
+    <rect x="370" y="204" width="60" height="50" fill="#8a6a24" opacity=".5"/>
+    <rect x="360" y="158" width="80" height="50" rx="5" fill="url(#p3-cap)"/>
+    <rect x="372" y="170" width="7" height="28" rx="3" fill="#c8c8c8" opacity=".3"/>
+    <rect x="342" y="268" width="11" height="266" rx="5" fill="#fff3d4" opacity=".26"/>
+    <rect x="458" y="290" width="6" height="240" rx="3" fill="#ffffff" opacity=".1"/>
+    <!-- чёрная этикетка -->
+    <rect x="348" y="372" width="104" height="102" rx="2" fill="#0c0c0c" opacity=".92"/>
+    <rect x="348" y="372" width="104" height="102" rx="2" fill="none" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="400" y="404" font-family="Georgia, 'Times New Roman', serif" font-size="15" letter-spacing="2.5" fill="#efe6cf" text-anchor="middle">MORAI</text>
+    <text x="400" y="424" font-family="Georgia, 'Times New Roman', serif" font-size="9" letter-spacing="3.5" fill="#c9a44c" text-anchor="middle">AROMA</text>
+    <text x="400" y="452" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="2" fill="#8f8a7d" text-anchor="middle">SANTAL 33</text>
+  </g>
+
+  <rect y="556" width="800" height="84" fill="#060402" opacity=".7"/>
+  <rect width="800" height="640" fill="url(#p3-vig)"/>
+</svg>

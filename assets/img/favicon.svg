@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="MORAI AROMA">
+  <defs>
+    <linearGradient id="f-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16241a"/>
+      <stop offset="1" stop-color="#070b08"/>
+    </linearGradient>
+    <linearGradient id="f-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbeec4"/>
+      <stop offset=".5" stop-color="#c9a44c"/>
+      <stop offset="1" stop-color="#8a6a24"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#f-bg)"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#c9a44c" stroke-width="1.5" stroke-opacity=".55"/>
+  <path d="M18 46 L18 20 L24 20 L32 36 L40 20 L46 20 L46 46 L40 46 L40 31 L34 44 L30 44 L24 31 L24 46 Z" fill="url(#f-gold)"/>
+</svg>
