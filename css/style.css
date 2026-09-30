@@ -327,19 +327,33 @@ ul { list-style: none; }
   border-bottom: 1px solid transparent;
 }
 
-.header.is-scrolled {
-  background: rgba(7, 11, 8, 0.9);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom-color: var(--line-soft);
+/* затемнение под шапкой: держит контраст поверх светлых фотографий */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(4, 7, 5, 0.66) 0%, rgba(4, 7, 5, 0.3) 58%, rgba(4, 7, 5, 0) 100%);
+  transition: opacity 0.35s var(--ease);
 }
 
+.header.is-scrolled::before { opacity: 0; }
+
 .header__inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
   height: var(--header-h);
+}
+
+.header.is-scrolled {
+  background: rgba(7, 11, 8, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: var(--line-soft);
 }
 
 .logo {
@@ -487,6 +501,18 @@ ul { list-style: none; }
     linear-gradient(180deg, rgba(5, 8, 6, 0.72) 0%, rgba(5, 8, 6, 0) 34%, rgba(5, 8, 6, 0.35) 78%, var(--bg) 100%);
 }
 
+/* Фотографический баннер: снимок 1600x900 на всю ширину */
+.hero__bg--photo {
+  background-image: url(../assets/img/hero-photo.jpg);
+  background-position: center 42%;
+}
+
+.hero__bg--photo::after {
+  background:
+    linear-gradient(90deg, rgba(5, 8, 6, 0.95) 0%, rgba(5, 8, 6, 0.8) 30%, rgba(5, 8, 6, 0.34) 58%, rgba(5, 8, 6, 0.42) 100%),
+    linear-gradient(180deg, rgba(5, 8, 6, 0.58) 0%, rgba(5, 8, 6, 0.05) 34%, rgba(5, 8, 6, 0.4) 82%, var(--bg) 100%);
+}
+
 /* Важно: не задаём max-width, иначе блок теряет выравнивание .container */
 .hero__content {
   position: relative;
@@ -524,6 +550,21 @@ ul { list-style: none; }
   align-items: center;
   gap: 11px;
   color: var(--muted);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.95), 0 0 22px rgba(0, 0, 0, 0.75);
+}
+
+.hero__nav .hero__index,
+.hero__nav .hero__counter { color: rgba(244, 241, 232, 0.92); }
+
+.hero__nav .hero__track {
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.8);
+}
+
+.hero__nav .round-btn {
+  background: rgba(6, 9, 7, 0.42);
+  border-color: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .hero__index {
@@ -1355,6 +1396,14 @@ ul { list-style: none; }
   .footer__bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
 
   .hero { min-height: 460px; }
+
+  .hero__bg--photo { background-position: 68% 40%; }
+
+  .hero__bg--photo::after {
+    background:
+      linear-gradient(90deg, rgba(5, 8, 6, 0.94) 0%, rgba(5, 8, 6, 0.72) 52%, rgba(5, 8, 6, 0.42) 100%),
+      linear-gradient(180deg, rgba(5, 8, 6, 0.62) 0%, rgba(5, 8, 6, 0.28) 46%, rgba(5, 8, 6, 0.62) 100%);
+  }
 
   .hero__nav {
     right: 22px;

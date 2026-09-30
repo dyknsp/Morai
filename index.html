@@ -15,10 +15,15 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="MORAI AROMA — парфюмерия, которая говорит за вас">
 <meta property="og:description" content="Уникальные композиции. Характер в каждой ноте.">
-<meta property="og:image" content="assets/img/hero.svg">
+<meta property="og:image" content="https://dyknsp.github.io/Morai/assets/img/hero-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Филин и флакон MORAI AROMA на мшистом бревне в лесу">
 <meta property="og:url" content="https://dyknsp.github.io/Morai/">
 
-<link rel="preload" href="assets/fonts/font-6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/hero-photo.jpg" as="image" fetchpriority="high">
+<link rel="preload" href="assets/fonts/font-29.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/font-2.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
 
@@ -28,7 +33,7 @@
   "@type": "Store",
   "name": "MORAI AROMA",
   "description": "Селективная парфюмерия: уникальные композиции, характер в каждой ноте.",
-  "image": "assets/img/hero.svg",
+  "image": "https://dyknsp.github.io/Morai/assets/img/hero-og.jpg",
   "url": "https://dyknsp.github.io/Morai/",
   "priceRange": "от 11 500 ₽",
   "currenciesAccepted": "RUB",
@@ -102,8 +107,8 @@
   <section class="hero" id="top" aria-label="Главный баннер" data-slider>
     <div class="hero__slides" data-slides>
 
-      <article class="hero__slide is-active" data-slide aria-hidden="false">
-        <div class="hero__bg" style="background-image:url('assets/img/hero.svg')"></div>
+      <article class="hero__slide hero__slide--photo is-active" data-slide aria-hidden="false">
+        <div class="hero__bg hero__bg--photo"></div>
         <div class="container hero__content">
           <p class="eyebrow">Парфюмерия, которая говорит за вас</p>
           <h1 class="hero__title">Больше,<br>чем просто аромат</h1>
