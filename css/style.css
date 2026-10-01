@@ -1031,8 +1031,8 @@ ul { list-style: none; }
   border: 1px solid var(--line);
 }
 
-.review__avatar--b { filter: hue-rotate(140deg) saturate(0.7); }
-.review__avatar--c { filter: hue-rotate(280deg) saturate(0.6); }
+.review__avatar--b { filter: brightness(1.08) contrast(1.05); }
+.review__avatar--c { filter: brightness(0.93) saturate(1.08); }
 
 .review__name {
   font-size: 12.5px;
