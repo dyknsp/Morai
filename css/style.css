@@ -803,7 +803,7 @@ ul { list-style: none; }
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-sm);
-  aspect-ratio: 7 / 5;
+  aspect-ratio: 5 / 4;
   background: #0a0f0b;
 }
 
