@@ -501,16 +501,39 @@ ul { list-style: none; }
     linear-gradient(180deg, rgba(5, 8, 6, 0.72) 0%, rgba(5, 8, 6, 0) 34%, rgba(5, 8, 6, 0.35) 78%, var(--bg) 100%);
 }
 
-/* Фотографический баннер: снимок 1600x900 на всю ширину */
+/* Фотографический баннер.
+   Десктоп: размытая копия кадра на всю ширину плюс резкое фото по высоте справа —
+   так сова видна целиком и широкий баннер её не обрезает. */
 .hero__bg--photo {
-  background-image: url(../assets/img/hero-photo.jpg);
-  background-position: center 42%;
+  background-image: url(../assets/img/hero-photo-blur.jpg);
+  background-size: cover;
+  background-position: center 45%;
 }
 
 .hero__bg--photo::after {
   background:
     linear-gradient(90deg, rgba(5, 8, 6, 0.95) 0%, rgba(5, 8, 6, 0.8) 30%, rgba(5, 8, 6, 0.34) 58%, rgba(5, 8, 6, 0.42) 100%),
     linear-gradient(180deg, rgba(5, 8, 6, 0.58) 0%, rgba(5, 8, 6, 0.05) 34%, rgba(5, 8, 6, 0.4) 82%, var(--bg) 100%);
+}
+
+.hero__photo {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.hero__photo img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.45) 9%, #000 24%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.45) 9%, #000 24%, #000 100%);
 }
 
 /* Важно: не задаём max-width, иначе блок теряет выравнивание .container */
@@ -1397,7 +1420,14 @@ ul { list-style: none; }
 
   .hero { min-height: 460px; }
 
-  .hero__bg--photo { background-position: 68% 40%; }
+  /* Мобильный баннер оставлен без изменений: резкий кадр на всю ширину */
+  .hero__bg--photo {
+    background-image: url(../assets/img/hero-photo.jpg);
+    background-size: cover;
+    background-position: 68% 40%;
+  }
+
+  .hero__photo { display: none; }
 
   .hero__bg--photo::after {
     background:
