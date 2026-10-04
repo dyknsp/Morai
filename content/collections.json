@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "her",
+    "title": "Для неё",
+    "description": "Композиции для разных настроений и поводов.",
+    "image": "/images/col-her.jpg"
+  },
+  {
+    "slug": "him",
+    "title": "Для него",
+    "description": "Ароматы с выразительным характером.",
+    "image": "/images/col-him.jpg"
+  },
+  {
+    "slug": "unisex",
+    "title": "Унисекс",
+    "description": "Парфюмерия вне рамок и ярлыков.",
+    "image": "/images/col-unisex.jpg"
+  },
+  {
+    "slug": "gift",
+    "title": "Подарочные наборы",
+    "description": "Идея подарка для близкого человека.",
+    "image": "/images/col-gift.jpg"
+  }
+]

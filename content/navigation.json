@@ -1,0 +1,12 @@
+{
+  "primary": [
+    { "label": "Коллекции", "href": "/#collections" },
+    { "label": "Каталог", "href": "/catalog" },
+    { "label": "О бренде", "href": "/about" },
+    { "label": "Доставка", "href": "/delivery" }
+  ],
+  "social": [
+    { "label": "ВКонтакте", "href": "https://vk.ru/morai_aroma" },
+    { "label": "Telegram", "href": "https://t.me/morai_aroma" }
+  ]
+}

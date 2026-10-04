@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "baccarat-rouge-540",
+    "name": "Maison Francis Kurkdjian Baccarat Rouge 540",
+    "shortName": "Baccarat Rouge 540",
+    "brand": "Maison Francis Kurkdjian",
+    "price": 18900,
+    "image": "/images/prod-1.jpg",
+    "collection": "unisex",
+    "featured": true,
+    "description": "Знаковая композиция Maison Francis Kurkdjian. Уточните доступные объёмы и формат у консультанта MORAI AROMA."
+  },
+  {
+    "slug": "dior-sauvage",
+    "name": "Dior Sauvage",
+    "shortName": "Sauvage",
+    "brand": "Dior",
+    "price": 11900,
+    "image": "/images/prod-2.jpg",
+    "collection": "him",
+    "featured": true,
+    "description": "Парфюмерная композиция Dior из мужской коллекции. Уточните доступные объёмы и формат у консультанта MORAI AROMA."
+  },
+  {
+    "slug": "le-labo-santal-33",
+    "name": "Le Labo Santal 33",
+    "shortName": "Santal 33",
+    "brand": "Le Labo",
+    "price": 13900,
+    "image": "/images/prod-3.jpg",
+    "collection": "unisex",
+    "featured": true,
+    "description": "Композиция Le Labo из селективной парфюмерной коллекции. Уточните доступные объёмы и формат у консультанта MORAI AROMA."
+  },
+  {
+    "slug": "tom-ford-black-orchid",
+    "name": "Tom Ford Black Orchid",
+    "shortName": "Black Orchid",
+    "brand": "Tom Ford",
+    "price": 18900,
+    "image": "/images/prod-4.jpg",
+    "collection": "her",
+    "featured": true,
+    "description": "Композиция Tom Ford, представленная в женской коллекции MORAI AROMA. Уточните доступные объёмы и формат у консультанта."
+  },
+  {
+    "slug": "bleu-de-chanel",
+    "name": "Chanel Bleu de Chanel",
+    "shortName": "Bleu de Chanel",
+    "brand": "Chanel",
+    "price": 11500,
+    "image": "/images/prod-5.jpg",
+    "collection": "him",
+    "featured": true,
+    "description": "Парфюмерная композиция Chanel из мужской коллекции. Уточните доступные объёмы и формат у консультанта MORAI AROMA."
+  }
+]

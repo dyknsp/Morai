@@ -1,0 +1,13 @@
+.git
+.next
+node_modules
+coverage
+.env
+.env.*
+!.env.example
+assets
+css
+js
+tests
+README.md
+AGENTS.md

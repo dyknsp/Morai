@@ -1,0 +1,103 @@
+name: Build and publish MORAI AROMA to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+env:
+  GITHUB_PAGES: "true"
+  NEXT_PUBLIC_SITE_URL: https://dyknsp.github.io/Morai
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Set up pnpm
+        uses: pnpm/setup@v3
+        with:
+          version: 11.25.0
+          install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Check content data
+        run: pnpm test
+      - name: Check TypeScript
+        run: pnpm typecheck
+      - name: Build static site
+        run: pnpm build
+      - name: Add IndexNow verification file
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          if [[ -z "$INDEXNOW_KEY" ]]; then
+            echo "IndexNow is not configured; skipping verification file."
+            exit 0
+          fi
+          if [[ ! "$INDEXNOW_KEY" =~ ^[A-Fa-f0-9]{32}$ ]]; then
+            echo "INDEXNOW_KEY must be a 32-character hexadecimal key." >&2
+            exit 1
+          fi
+          printf '%s' "$INDEXNOW_KEY" > "out/${INDEXNOW_KEY}.txt"
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: out
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Check out repository for IndexNow
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Check published site
+        env:
+          SITE_URL: https://dyknsp.github.io/Morai
+        run: |
+          for attempt in {1..18}; do
+            if curl --fail --silent --show-error "$SITE_URL/" >/dev/null; then exit 0; fi
+            sleep 10
+          done
+          echo "GitHub Pages health check failed." >&2
+          exit 1
+      - name: Set up Node.js for IndexNow
+        if: success()
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Notify IndexNow
+        if: success()
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          NEXT_PUBLIC_SITE_URL: https://dyknsp.github.io/Morai
+          DEPLOY_BASE: ${{ github.event.before }}
+          DEPLOY_HEAD: ${{ github.sha }}
+        run: |
+          if [[ -n "$INDEXNOW_KEY" ]]; then node scripts/indexnow.mjs; else echo "IndexNow is not configured; skipping."; fi
