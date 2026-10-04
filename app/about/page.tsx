@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata(
   "О бренде MORAI AROMA",
   "История MORAI AROMA: духи ручной работы небольшими партиями, масляные ароматы и диффузоры.",
   "/about",
-  "/images/owl-eye.jpg",
+  "/images/prod-1.jpg",
 );
 
 export default function AboutPage() {
@@ -28,7 +28,7 @@ export default function AboutPage() {
         </header>
 
         <div className="article-cover brand-cover">
-          <Image src={assetPath("/images/owl-eye.jpg")} alt="Атмосфера бренда MORAI AROMA" fill sizes="100vw" priority />
+          <Image src={assetPath("/images/prod-1.jpg")} alt="Флакон духов MORAI AROMA среди хвои" fill sizes="100vw" priority />
         </div>
 
         <div className="brand-story article-body">

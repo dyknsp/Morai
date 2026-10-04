@@ -25,7 +25,7 @@ export default function HomePage() {
     logo: absoluteUrl("/images/favicon.svg"),
     image: absoluteUrl("/images/hero-og.jpg"),
     description: siteDescription,
-    sameAs: ["https://vk.ru/morai_aroma", "https://t.me/morai_aroma"],
+    sameAs: ["https://vk.ru/morai_aroma"],
   };
   const website = {
     "@context": "https://schema.org",

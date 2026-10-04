@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import products from "@/content/products.json";
 import type { Product } from "@/lib/content";
 import { useStore } from "@/components/store/store-provider";
@@ -9,12 +10,15 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { ProductActions } from "@/components/products/product-actions";
 import { Trash2 } from "lucide-react";
 import { assetPath } from "@/lib/site";
+import { CheckoutDialog } from "@/components/store/checkout-dialog";
 
 const items = products as Product[];
 const priceFormatter = new Intl.NumberFormat("ru-RU");
 
 export function StoreContents({ mode }: { mode: "cart" | "favorites" }) {
   const { cart, favorites, removeFromCart } = useStore();
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
+  const [orderPlaced, setOrderPlaced] = useState(false);
   const selected = mode === "cart"
     ? items.filter((product) => cart[product.slug])
     : items.filter((product) => favorites.includes(product.slug));
@@ -30,21 +34,6 @@ export function StoreContents({ mode }: { mode: "cart" | "favorites" }) {
   }
 
   const total = selected.reduce((sum, product) => sum + product.price * (cart[product.slug] ?? 1), 0);
-
-  function requestOrder() {
-    const lines = selected.map((product) => {
-      const count = cart[product.slug] ?? 1;
-      return `• ${product.name} — ${count} шт. × ${priceFormatter.format(product.price)} ₽`;
-    });
-    const message = [
-      "Здравствуйте! Хочу уточнить заказ в MORAI AROMA:",
-      ...lines,
-      `Предварительная сумма по сайту: ${priceFormatter.format(total)} ₽.`,
-      "Пожалуйста, подтвердите наличие, формат и условия доставки.",
-    ].join("\n");
-
-    window.open(`https://t.me/morai_aroma?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
-  }
 
   return (
     <div className="store-list">
@@ -70,8 +59,18 @@ export function StoreContents({ mode }: { mode: "cart" | "favorites" }) {
       {mode === "cart" && (
         <div className="cart-total">
           <strong>Итого: {priceFormatter.format(total)} ₽</strong>
-          <Button onClick={requestOrder}>Заказать в Telegram</Button>
-          <p>В Telegram откроется черновик заказа. Наличие, формат, доставка и итоговая сумма подтверждаются с консультантом.</p>
+          <Button onClick={() => { setOrderPlaced(false); setCheckoutOpen(true); }}>Оформить заказ</Button>
+          <p>После оформления заказ появится в личном кабинете администратора.</p>
+          {checkoutOpen && (
+            <CheckoutDialog
+              items={selected.map((product) => ({ slug: product.slug, name: product.name, quantity: cart[product.slug] ?? 1, price: product.price }))}
+              onClose={() => {
+                setCheckoutOpen(false);
+                if (orderPlaced) selected.forEach((product) => removeFromCart(product.slug));
+              }}
+              onComplete={() => setOrderPlaced(true)}
+            />
+          )}
         </div>
       )}
     </div>

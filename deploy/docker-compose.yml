@@ -4,16 +4,22 @@ services:
       context: ..
       dockerfile: Dockerfile
       args:
-        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL}
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:?Set NEXT_PUBLIC_SITE_URL in .env}
     restart: unless-stopped
     environment:
       NODE_ENV: production
-      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL}
-      INDEXNOW_KEY: ${INDEXNOW_KEY}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:?Set NEXT_PUBLIC_SITE_URL in .env}
+      INDEXNOW_KEY: ${INDEXNOW_KEY:-}
+      ADMIN_USERNAME: ${ADMIN_USERNAME:?Set ADMIN_USERNAME in .env}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Set ADMIN_PASSWORD in .env}
+      ADMIN_SESSION_SECRET: ${ADMIN_SESSION_SECRET:?Set ADMIN_SESSION_SECRET in .env}
+      ORDERS_FILE: /app/data/orders.json
       PORT: 3000
       HOSTNAME: 0.0.0.0
     expose:
       - "3000"
+    volumes:
+      - orders_data:/app/data
     healthcheck:
       test:
         - CMD
@@ -34,7 +40,7 @@ services:
       app:
         condition: service_healthy
     environment:
-      MORAI_DOMAIN: ${MORAI_DOMAIN}
+      MORAI_DOMAIN: ${MORAI_DOMAIN:?Set MORAI_DOMAIN in .env}
     ports:
       - "80:80"
       - "443:443"
@@ -48,3 +54,6 @@ services:
 networks:
   web:
     driver: bridge
+
+volumes:
+  orders_data:

@@ -5,7 +5,6 @@ import { useState } from "react";
 import { Heart, Menu, ShoppingBag, X } from "lucide-react";
 import navigation from "@/content/navigation.json";
 import { useStore } from "@/components/store/store-provider";
-import { ThemeToggle } from "@/components/layout/theme-toggle";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -27,7 +26,6 @@ export function Header() {
           <Link href="/blog" onClick={() => setOpen(false)}>Журнал</Link>
         </nav>
         <div className="header-actions">
-          <ThemeToggle />
           <Link className="icon-link" href="/favorites" aria-label={"Избранное, товаров: " + favorites.length}>
             <Heart size={18} />
             {favorites.length > 0 && <span className="count-badge">{favorites.length}</span>}

@@ -12,7 +12,7 @@ export function Newsletter() {
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setMessage("Форма рассылки пока настраивается. Напишите нам в Telegram.");
+    setMessage("Рассылка скоро появится. Пока следите за новостями во ВКонтакте.");
   }
 
   return (

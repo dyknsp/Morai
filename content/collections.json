@@ -16,11 +16,5 @@
     "title": "Унисекс",
     "description": "Парфюмерия вне рамок и ярлыков.",
     "image": "/images/col-unisex.jpg"
-  },
-  {
-    "slug": "gift",
-    "title": "Подарочные наборы",
-    "description": "Идея подарка для близкого человека.",
-    "image": "/images/col-gift.jpg"
   }
 ]

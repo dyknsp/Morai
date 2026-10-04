@@ -6,6 +6,7 @@ dist/
 coverage/
 .env*
 !.env.example
+/data/
 *.log
 *.tsbuildinfo
 pnpm-debug.log*

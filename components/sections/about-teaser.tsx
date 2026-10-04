@@ -7,7 +7,7 @@ import { assetPath } from "@/lib/site";
 export function AboutTeaser() {
   return (
     <section className="about-teaser">
-      <Image src={assetPath("/images/owl-eye.jpg")} alt="" fill sizes="100vw" />
+      <Image src={assetPath("/images/prod-1.jpg")} alt="" fill sizes="100vw" />
       <div className="about-overlay" />
       <div className="shell about-content">
         <p className="eyebrow">О бренде</p>
